@@ -13,34 +13,16 @@
 
             };
 
+           
             // Print the Tic Tac Toe lines
             GameDraw.PrintTicTacToeLines(ticTacToeBoard);
+
+
+            Task task = Task.Run(() => KeyHandler.KeyboardKeys());
+            task.Wait();
         }
 
-        /*
-                while (true)
-                { 
-                    ConsoleKeyInfo keya = Console.ReadKey(true);
-
-                    if (keya.Key == ConsoleKey.DownArrow)
-                    {
-                        Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop + 1);
-                    }
-                    else if (keya.Key == ConsoleKey.UpArrow && Console.CursorTop > 0)
-                    {
-                        Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
-                    }
-                    else if (keya.Key == ConsoleKey.LeftArrow && Console.CursorLeft > 0)
-                    { 
-                        Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-                    }
-                    else if (keya.Key == ConsoleKey.RightArrow)
-                    {
-                        Console.SetCursorPosition(Console.CursorLeft + 1, Console.CursorTop);
-                    }
-
-                */
-
+        
 
 
 
