@@ -10,13 +10,14 @@ namespace tic_tac_toe
     {
         static public void PrintTicTacToeLines(string[][] board)
         {
+            Console.WriteLine(" |---|---|---|");
             for (int row = 0; row < board.Length; row++)
             {
                 Console.WriteLine(string.Join(" | ", board[row]));
 
-                if (row < board.Length - 1)
+                if (row < board.Length )
                 {
-                    Console.WriteLine(" -------------");
+                    Console.WriteLine(" |---|---|---|");
                 }
             }
         }
